@@ -1,5 +1,5 @@
 
-<!-- Your monitor number = #$34T# -->
+<!-- Your monitor number = 51 -->
 
 # Linux user account management
 
@@ -21,7 +21,7 @@ ip -4 addr
 | ---       | ---  |
 | admin     | pass |
 |           |      |
-| sec#$34T# | pass |
+| sec51 | pass |
 |           |      |
 | _________ | pass |
 
@@ -94,7 +94,7 @@ ls -la
 | ---       | ---         |
 | admin     | drwx-wxr-x  |
 | rivan     | drwxrw-rw-  |
-| sec#$34T# | drw-rw-rw-  |
+| sec51 | drw-rw-rw-  |
 
 <br>
 
@@ -116,7 +116,7 @@ groupadd CA
 ### Exercise 02 - Modify user accounts to achieve the following:
   - admin is part of HR, SEC, CA, and is a sudoer
   - rivan is part of SEC and HR
-  - sec#$34T# is part of SEC and CA
+  - sec51 is part of SEC and CA
 
 ```
 @NetOps
@@ -130,7 +130,7 @@ usermod -aG HR,SEC,CA admin
 @NetOps
 chown admin:HR admin
 chown rivan:SEC rivan
-chown sec#$34T#:CA sec#$34T
+chown sec51:CA sec#$34T
 ```
 
 >[!TIP]
@@ -150,7 +150,7 @@ Open NetOps VM IP on a browser
  - Pass: C1sc0123
 
 For an SSH connection to be established, the device must have:
-    - a non-default hostname         hostname coreBaba#$34T#
+    - a non-default hostname         hostname coreBaba51
     - a domain name                  ip domain name day1lab.com
     - a local user account           username admin privilege 15 secret pass
     - generated crypto keys          crypto key generate rsa modulus 2048
@@ -167,7 +167,7 @@ Extra lines
 ```
 @coreTaas
 conf t
- hostname coreTaas-#$34T#
+ hostname coreTaas-51
  service password-encryption
  no logging console
  no ip domain-lookup
@@ -187,7 +187,7 @@ conf t
 ```
 @coreBaba
 conf t
- hostname coreBaba-#$34T#
+ hostname coreBaba-51
  service password-encryption
  no logging console
  no ip domain-lookup
@@ -207,7 +207,7 @@ conf t
 ```
 @cucm
 conf t
- hostname cucm-#$34T#
+ hostname cucm-51
  service password-encryption
  no logging console
  no ip domain-lookup
@@ -226,7 +226,7 @@ conf t
 ```
 @edge
 conf t
- hostname edge-#$34T#
+ hostname edge-51
  service password-encryption
  no logging console
  no ip domain-lookup
@@ -246,7 +246,7 @@ conf t
 ```
 @UTM-PH
 conf t
- hostname UTM-#$34T#
+ hostname UTM-51
  service password-encryption
  no logging console
  no ip domain-lookup
